@@ -1,18 +1,14 @@
 //
-//  TransitionManager.m
+//  CustomTransition.m
 //  PresentViewController
 //
 //  Created by 姚晓丙 on 2019/1/1.
 //  Copyright © 2019 姚晓丙. All rights reserved.
 //
 
-#import "TransitionManager.h"
+#import "CustomTransition.h"
 
-
-
-@implementation MyAnimator
-
-
+@implementation CustomTransition
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext
 {
     return 1.0 ;
@@ -27,7 +23,7 @@
                                 viewControllerForKey:UITransitionContextToViewControllerKey];
     
     UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
-    UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
+    //    UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
     
     // Set up some variables for the animation.
     CGRect containerFrame = containerView.frame;
@@ -59,7 +55,7 @@
     // Animate using the animator's own duration value.
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                      animations:^{
-//                         [fromView setFrame:fromViewFinalFrame];
+                         //                         [fromView setFrame:fromViewFinalFrame];
                          [toView setFrame:toViewFinalFrame];
                      }
                      completion:^(BOOL finished){
@@ -72,31 +68,5 @@
                      }];
     
 }
-
-
-@end
-
-
-
-
-@implementation TransitionManager
-
-
-- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
-{
-    MyAnimator* animator = [[MyAnimator alloc] init];
-    animator.presenting = YES;
-    return animator;
-}
-
-- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
-{
-    MyAnimator* animator = [[MyAnimator alloc] init];
-    animator.presenting = NO;
-    return animator;
-}
-
-
-
 
 @end

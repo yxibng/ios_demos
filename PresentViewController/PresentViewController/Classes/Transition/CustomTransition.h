@@ -1,5 +1,5 @@
 //
-//  TransitionManager.h
+//  CustomTransition.h
 //  PresentViewController
 //
 //  Created by 姚晓丙 on 2019/1/1.
@@ -8,15 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
 NS_ASSUME_NONNULL_BEGIN
 
-
-@interface MyAnimator : NSObject<UIViewControllerAnimatedTransitioning>
+@interface CustomTransition : NSObject<UIViewControllerAnimatedTransitioning>
 @property (nonatomic, assign) BOOL presenting;
-@end
-
-@interface TransitionManager : NSObject<UIViewControllerTransitioningDelegate>
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		118957E021DBAB70005C9A3F /* CustomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 118957DF21DBAB70005C9A3F /* CustomTransition.m */; };
 		11A839C921DB0FA1003270C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A839C821DB0FA1003270C3 /* AppDelegate.m */; };
 		11A839D521DB0FA1003270C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A839D321DB0FA1003270C3 /* Main.storyboard */; };
 		11A839D721DB0FA3003270C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A839D621DB0FA3003270C3 /* Assets.xcassets */; };
@@ -16,9 +17,12 @@
 		11A839E921DB10EB003270C3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A839E821DB10EB003270C3 /* SecondViewController.m */; };
 		11A839EC21DB1623003270C3 /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A839EB21DB1623003270C3 /* PopoverViewController.m */; };
 		11A839EF21DB3545003270C3 /* TransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A839EE21DB3545003270C3 /* TransitionManager.m */; };
+		11AF442421DBA8DB00161FF2 /* InteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF442321DBA8DB00161FF2 /* InteractiveTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		118957DE21DBAB70005C9A3F /* CustomTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTransition.h; sourceTree = "<group>"; };
+		118957DF21DBAB70005C9A3F /* CustomTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTransition.m; sourceTree = "<group>"; };
 		11A839C421DB0FA1003270C3 /* PresentViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PresentViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A839C721DB0FA1003270C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		11A839C821DB0FA1003270C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -35,6 +39,8 @@
 		11A839EB21DB1623003270C3 /* PopoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
 		11A839ED21DB3545003270C3 /* TransitionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionManager.h; sourceTree = "<group>"; };
 		11A839EE21DB3545003270C3 /* TransitionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionManager.m; sourceTree = "<group>"; };
+		11AF442221DBA8DB00161FF2 /* InteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InteractiveTransition.h; sourceTree = "<group>"; };
+		11AF442321DBA8DB00161FF2 /* InteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractiveTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		118957E121DBAC16005C9A3F /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				11A839ED21DB3545003270C3 /* TransitionManager.h */,
+				11A839EE21DB3545003270C3 /* TransitionManager.m */,
+				11AF442221DBA8DB00161FF2 /* InteractiveTransition.h */,
+				11AF442321DBA8DB00161FF2 /* InteractiveTransition.m */,
+				118957DE21DBAB70005C9A3F /* CustomTransition.h */,
+				118957DF21DBAB70005C9A3F /* CustomTransition.m */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		11A839BB21DB0FA1003270C3 = {
 			isa = PBXGroup;
 			children = (
@@ -88,8 +107,7 @@
 				11A839E821DB10EB003270C3 /* SecondViewController.m */,
 				11A839EA21DB1623003270C3 /* PopoverViewController.h */,
 				11A839EB21DB1623003270C3 /* PopoverViewController.m */,
-				11A839ED21DB3545003270C3 /* TransitionManager.h */,
-				11A839EE21DB3545003270C3 /* TransitionManager.m */,
+				118957E121DBAC16005C9A3F /* Transition */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -167,8 +185,10 @@
 				11A839E921DB10EB003270C3 /* SecondViewController.m in Sources */,
 				11A839DD21DB0FA3003270C3 /* main.m in Sources */,
 				11A839C921DB0FA1003270C3 /* AppDelegate.m in Sources */,
+				118957E021DBAB70005C9A3F /* CustomTransition.m in Sources */,
 				11A839EC21DB1623003270C3 /* PopoverViewController.m in Sources */,
 				11A839EF21DB3545003270C3 /* TransitionManager.m in Sources */,
+				11AF442421DBA8DB00161FF2 /* InteractiveTransition.m in Sources */,
 				11A839E621DB106F003270C3 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

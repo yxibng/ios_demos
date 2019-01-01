@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.transition = [[InteractiveTransition alloc] initWithController:self];
 }
 
 - (IBAction)dismissViewController:(id)sender {

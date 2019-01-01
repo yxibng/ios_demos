@@ -66,7 +66,7 @@
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     SecondViewController *vc = [sb instantiateViewControllerWithIdentifier:@"SecondViewController"];
     if (!self.manager) {
-        self.manager = [TransitionManager new];
+        self.manager = [[TransitionManager alloc] initWithController:vc];
     }
     vc.transitioningDelegate = self.manager;
     [self presentViewController:vc animated:YES completion:nil];
